@@ -1,0 +1,16 @@
+Algoritmo area
+	escribir "ingresa el radio del circulo(el radio es 5):"
+	leer R
+	escribir "ingresa la hipotenusa del triangulo(la hipotenusa es 10):"
+	leer H
+	
+	//calculos
+	aC = (3.1416*R^2)
+	AT = raiz((H^2)-(R^2))
+	T = ((R*2)*(AT))/2
+	cp = (3.1416*((R/2)^2))
+	A = (T-(cp/2))+aC/4
+	
+	//mostrar resultados
+	escribir "el area es "," ",A
+FinAlgoritmo

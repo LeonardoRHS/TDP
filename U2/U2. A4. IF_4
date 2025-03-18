@@ -1,0 +1,75 @@
+El programador sigue teniendo complicaciones para ajustar su código cuando ingresan valores, pero necesita ayuda, ahora su jefe, que no conoce mucho de programación, quiere un programa para calcular los rendimientos de 4 vendedores y ver la diferencia entre estos.
+
+El programa debe recibir los 4 valores de los vendedores, que se calcula en ventas por mes, después, el programa debe ordenarlos de menor a mayor, siendo 4 el mayor y 1 el menor, una vez hecho esto debe hacer las siguientes operaciones.
+
+Mostrar los números ordenados
+El resultado del 4 menos el 1
+El resultado del 2 menos el 1
+El resultado del 4 menos el 3
+El resultado del 3 menos el 2
+La suma de todas las ventas y el promedio general
+Algoritmo ordenarventas
+	Definir ventas, i, j, temp Como Real
+    Dimension ventas[4]
+    
+    Para i <- 1 Hasta 4 Hacer
+        Escribir "Ingrese las ventas del vendedor ", i, ":"
+        Leer ventas[i]
+    FinPara
+    
+    
+    Para i <- 1 Hasta 3 Hacer
+        Para j <- 1 Hasta 3 Hacer
+            Si ventas[j] > ventas[j+1] Entonces
+                temp <- ventas[j]
+                ventas[j] <- ventas[j+1]
+                ventas[j+1] <- temp
+            FinSi
+        FinPara
+    FinPara
+    
+    
+    Escribir "Ventas ordenadas de menor a mayor:"
+    Para i <- 1 Hasta 4 Hacer
+        Escribir ventas[i]
+    FinPara
+    
+    
+    Escribir "El resultado del mayor menos el menor: ", ventas[4] - ventas[1]
+    Escribir "El resultado del segundo menos el menor: ", ventas[2] - ventas[1]
+    Escribir "El resultado del mayor menos el tercero: ", ventas[4] - ventas[3]
+    Escribir "El resultado del tercero menos el segundo: ", ventas[3] - ventas[2]
+    
+    
+    Definir suma, promedio Como Real
+    suma <- 0
+    Para i <- 1 Hasta 4 Hacer
+        suma <- suma + ventas[i]
+    FinPara
+    
+    promedio <- suma / 4
+    
+    Escribir "La suma total de las ventas es: ", suma
+    Escribir "El promedio general es: ", promedio
+FinAlgoritmo
+*** Ejecución Iniciada. ***
+Ingrese las ventas del vendedor 1:
+> 34
+Ingrese las ventas del vendedor 2:
+> 55
+Ingrese las ventas del vendedor 3:
+> 44
+Ingrese las ventas del vendedor 4:
+> 33
+Ventas ordenadas de menor a mayor:
+33
+34
+44
+55
+El resultado del mayor menos el menor: 22
+El resultado del segundo menos el menor: 1
+El resultado del mayor menos el tercero: 11
+El resultado del tercero menos el segundo: 10
+La suma total de las ventas es: 166
+El promedio general es: 41.5
+*** Ejecución Finalizada. ***

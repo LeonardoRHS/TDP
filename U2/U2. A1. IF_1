@@ -1,0 +1,66 @@
+Diseña un algoritmo que resuelva el siguiente problema.
+
+Un programador desea saber qué unidad de medida de datos debe ser la más adecuada dependiendo de los bytes que ingrese el usuario. Las unidades a revisar son KB, MB, GB, TB y PB. Usa la siguiente tabla de referencia.
+
+
+
+Si el usuario ingresa 5045 bytes, este se divide entre 1024 y el mensaje debería ser 4.92 KB. 
+
+Usa este enlace para validar la información. https://discoveryformacion.com/calculadora-para-convertir-unidades-de-almacenamiento-informaticas/
+Algoritmo  unidad_de_medida_de_datos
+    Escribir "Ingrese la unidad de bytes :"
+    Leer b
+	
+    Si b >= 1024 Entonces
+        u = "KB"
+		b = b / 1024
+    FinSi
+	escribir " la cantidad equivale a: ",b,"", u
+	si b >= 1048576 Entonces
+		u = "MB"
+		b = b / 1024
+	FinSi
+	Escribir "la cantidad equivale a: ",b,"", u
+	si b >= 1073741824 Entonces
+		u = "GB"
+		b = b / 1024
+	FinSi
+	Escribir "la cantidad equivale a: ",b,"", u
+	si b >= 1099511627776 Entonces
+		u = "TB"
+		b = b / 1024
+	FinSi
+	Escribir "la cantidad equivale a: ",b,"", u
+	si b >= 1125899906842624 Entonces
+		u = "PB"
+		b = b / 1024
+	FinSi
+	Escribir "la cantidad equivale a: ",b,"", u
+	si b >= 1152921504606846976 Entonces
+		u = "EB"
+		b = b / 1024
+	FinSi
+	Escribir "la cantidad equivale a: ",b,"", u
+	si b >= 1180591620717411303424 Entonces
+		u = "ZB"
+		b = b / 1024
+	FinSi
+	Escribir "la cantidad equivale a: ",b,"", u
+	si b >= 1208925819614629174706176 Entonces
+		u = "YB"
+		b = b / 1024
+	FinSi
+	Escribir "la cantidad equivale a: ",b,"", u
+FinAlgoritmo
+*** Ejecución Iniciada. ***
+Ingrese la unidad de bytes :
+> 234245003003030030300040400500540505030050050503030
+ la cantidad equivale a: 228754885745146510000000000000000000000000000000KB
+la cantidad equivale a: 223393443110494640000000000000000000000000000MB
+la cantidad equivale a: 218157659287592420000000000000000000000000GB
+la cantidad equivale a: 213044589148039480000000000000000000000TB
+la cantidad equivale a: 208051356589882300000000000000000000PB
+la cantidad equivale a: 203175152919806930000000000000000EB
+la cantidad equivale a: 198413235273248960000000000000ZB
+la cantidad equivale a: 193762925071532190000000000YB
+*** Ejecución Finalizada. ***

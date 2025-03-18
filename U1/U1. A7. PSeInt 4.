@@ -1,0 +1,85 @@
+Un banco necesita realizar un sistema de evaluación preliminar para otorgar un crédito, a fin de mejorar el tiempo de validación y que los potenciales clientes puedan saber de manera más rápido a quiénes se les pudiera otorgar un crédito.
+
+De acuerdo a la última reunión innecesaria, a las 6:00 p.m. un día sábado, se presentaron las siguientes condicionales.
+
+El prospecto debe tener al menos 21 años de edad, debe tener un ingreso de al menos 8,500 mensuales, debe tener al menos 5 años de historial crediticio y dicho historial crediticio deberá ser positivo, es decir, que siempre han pagado a tiempo, finalmente, el monto del crédito deberá ser de al menos $10,000.
+
+Después de una discusión acalorada donde la Lic. Petra comenzó a llorar defendiendo a la gente de bajos recursos, se llegó al siguiente acuerdo, fue horrible, la reunión terminó a las 9:00 p.m., pero al final, todos abrazaron a la Lic. Petra y oraron por ella, hubo galletas y café para todos. Se llegaron a los siguientes acuerdos.
+
+El prospecto deberá tener al menos 18 años de edad, con un ingreso de al menos $4,000 al mes, deberá tener al menos 2 años trabajando, ya no se revisará su historial crediticio y se estableció a que el préstamo máximo sería de máximo un 15% del salario mensual del prospecto multiplicado por 12 mensualidades. Adicionalmente, si el prospecto tiene al menos $10,000 de saldo en su cuenta de banco o si el préstamo es para una cuestión médica, su crédito será aprobado automáticamente.
+
+El reporte deberá mostrar la edad del prospecto, su ingreso mensual, de cuánto sería el monto máximo del préstamo y su crédito será aprobado o no.
+Algoritmo credito
+	Definir edad_de_prospecto Como Entero
+	Definir ingreso_mensual Como Real
+	Definir es_cuestion_medica, aplicable_credito Como Logico
+	Escribir "ingrese su edad"
+	Leer edad_de_prospecto
+    
+    Escribir "ingrese su ingreso mensual"
+    Leer ingreso_mensual
+    
+	
+	Escribir "el prospecto tiene al menos $10,000 de saldo en su cuenta.(1=si 0= no)"
+    Leer monto_maximo
+    
+	Escribir " es para una cuestión médica (1=si 0=no)"
+	leer es_cuestion_medica
+	
+    c1 = edad_de_prospecto <= 18   
+    c2 = saldo_de_cuenta <= 10000
+	c3 = años_trabajando > 2
+	c4 = ingreso_mensual * 0.15 *12
+    Escribir c1
+    Escribir c2
+	Escribir c3
+	Escribir c4
+	Escribir es_cuestion_medica
+	Escribir cantidad_dinero
+    
+    // Evaluación de descuento
+	aplicable_credito <- (c1) Y (c2) y (c3) O es_cuestion_medica O edad O aplicable_credito
+    
+	Escribir nombre, " credito aplicable ", aplicable_credito
+	Escribir "su monto seria ", c4
+	Escribir "su edad es ", edad_de_prospecto
+	Escribir "ingreso mensual ", ingreso_mensual
+FinAlgoritmo
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*** Ejecución Iniciada. ***
+ingrese su edad
+> 23
+ingrese su ingreso mensual
+> 5000
+el prospecto tiene al menos $10,000 de saldo en su cuenta.(1=si 0= no)
+> 1
+ es para una cuestión médica (1=si 0=no)
+> 0
+FALSO
+VERDADERO
+FALSO
+9000
+FALSO
+
+ credito aplicable FALSO
+su monto seria 9000
+su edad es 23
+ingreso mensual 5000
+*** Ejecución Finalizada. ***
+

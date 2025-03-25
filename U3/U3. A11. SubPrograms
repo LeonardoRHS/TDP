@@ -1,0 +1,23 @@
+SubProceso figura()
+    Mientras repetir = 1 Hacer
+			Escribir "Elija una figura para calcular:"
+			Escribir "1. esfera"
+			Escribir "2. cilindro"
+			
+			Escribir "Ingrese el número de la figura:"
+			Leer op
+			
+			Si op = 1 Entonces
+				areaesfera()
+			Sino
+				Si op = 2 Entonces
+					areacilindro()
+				Sino
+					Si op = 3 Entonces
+						volumen()
+					Sino
+						
+					FinSi
+				FinSi
+			FinSi
+FinSubProceso

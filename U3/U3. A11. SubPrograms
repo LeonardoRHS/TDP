@@ -1,23 +1,69 @@
-SubProceso figura()
-    Mientras repetir = 1 Hacer
-			Escribir "Elija una figura para calcular:"
-			Escribir "1. esfera"
-			Escribir "2. cilindro"
-			
-			Escribir "Ingrese el número de la figura:"
-			Leer op
-			
-			Si op = 1 Entonces
-				areaesfera()
+Subproceso areaCilindro
+	Definir radio, altura, area, volumen Como Real
+    Escribir "Ingrese el radio del cilindro:"
+    Leer radio
+    Escribir "Ingrese la altura del cilindro:"
+    Leer altura
+    area <- 2 * PI * radio * (radio + altura)
+    volumen <- PI * radio^2 * altura
+    Escribir "Área del cilindro: ", area
+    Escribir "Volumen del cilindro: ", volumen
+
+FinSubproceso
+
+Subproceso piramide
+    Definir base, altura, area_base, area_lateral, area_total, volumen Como Real
+    Escribir "Ingrese la base de la pirámide (lado del cuadrado):"
+    Leer base
+    Escribir "Ingrese la altura de la pirámide:"
+    Leer altura
+    area_base <- base^2
+    area_lateral <- 4 * ( (base * ((base/2)^2 + altura^2)) / 2 )
+    area_total <- area_base + area_lateral
+    volumen <- (1/3) * area_base * altura
+    Escribir "Área de la pirámide: ", area_total
+    Escribir "Volumen de la pirámide: ", volumen
+FinSubproceso
+
+Subproceso volumenEsfera
+    Definir radio, area, volumen Como Real
+    Escribir "Ingrese el radio de la esfera:"
+    Leer radio
+    area <- 4 * PI * radio^2
+    volumen <- (4/3) * PI * radio^3
+    Escribir "Área de la esfera: ", area
+    Escribir "Volumen de la esfera: ", volumen
+FinSubproceso
+
+Proceso principal
+	Definir opcion, rep Como Entero
+    rep <- 1
+	
+	Mientras rep = 1 Hacer
+		Escribir "Elija una figura para calcular:"
+		Escribir "1. Cílindro"
+		Escribir "2. piramide"
+		Escribir "3. Esfera"
+		Escribir "Ingrese el número de la figura:"
+		Leer opcion
+		
+		Si opcion = 1 Entonces
+			areaCilindro()
+		Sino
+			Si opcion = 2 Entonces
+				piramide()
 			Sino
-				Si op = 2 Entonces
-					areacilindro()
+				Si opcion = 3 Entonces
+					volumenEsfera()
 				Sino
-					Si op = 3 Entonces
-						volumen()
-					Sino
-						
-					FinSi
+					Escribir "Opción no válida"
 				FinSi
 			FinSi
-FinSubProceso
+		FinSi
+		
+		Escribir "¿Desea realizar otro cálculo? (1 = Sí, 0 = No)"
+		Leer rep
+	FinMientras
+FinProceso
+	
+	

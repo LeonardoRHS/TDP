@@ -25,4 +25,6 @@ Descripción breve de la unidad: En esta unidad se aprendieron conceptos como la
 ## Unidad 3:
 Descripción breve de la unidad: En esta unidad se aprendieron conceptos como los subprograma para utilizarlos en los codigos y como crear un repositorio en github y como modificarlos entre otras cosas mas.
 
-[Ir a la unidad 3]()
+[Ir a la unidad 3](https://github.com/LeonardoRHS/TDP/tree/ebe8d3ee4b00b0e11f196610ca5aaeaa918699ed/U3)
+
+Comentarios personales sobre la materia y propuestas de mejoras: mi comentario personal es que todos los temas que vimos se explicaron muy bien y mis propuestas de mejoras no tengo ninguna por el momento.
